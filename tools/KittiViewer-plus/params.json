@@ -1,0 +1,52 @@
+{
+    "kitti_detection_root": "/home/usslab/SensorFusion",
+    "kitti_tracking_root": "/data/sets/kitti_tracking",
+    "kitti_segmentation_root": "/data/sets/kitti_segmentation",
+    "selected_split": "kitti_attack",
+
+    "folders": {
+        "detection": {
+            "calib": "kitti_clean/calib",
+            "image": "kitti_clean/image_2",
+            "label": "kitti_clean/label_2",
+            "velodyne": "lidar_laser_creating_car"
+        },
+        "tracking": {
+            "calib": "calib",
+            "image": "image_02",
+            "label": "label_02",
+            "velodyne": "velodyne"
+        }
+    },
+
+    "compare_results_detection": {
+        
+        "root": "/home/usslab/SensorFusion/sensorfusion/tools/KittiViewer-plus/Results_Viewer/F-pointnet",
+        "methods": [
+
+            {
+                "name": "lidar_laser_creating_car",
+                "color": [0.0, 0.0, 1.0]   
+            }
+        ]
+    },
+
+    "compare_results_tracking": {
+
+        "root": "/data/sets/kitti_results_tracking",
+        "format": "ab3dmot",
+        "methods": [
+
+            {
+                "name": "model1",
+                "color": [0.0, 0.0, 1.0]
+            },
+            {
+                "name": "model2",
+                "color": [0.0, 1.0, 0.0]
+            }
+        ]
+    }
+
+
+}
